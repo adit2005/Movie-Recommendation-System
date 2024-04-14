@@ -21,9 +21,9 @@ def recommend(movie):
        #fetching poster from API
        recommended_movies_poster.append(fetch_poster(movie_id))
     return recommended_movies, recommended_movies_poster
-movies_dict=pickle.load(open('movie_dict.pkl','rb'))
+movies_dict=pickle.load(open('movie_dict.pkl'))
 movies=pd.DataFrame(movies_dict)
-similarity=pickle.load(open(similarity.pkl','rb'))
+similarity=pickle.load(open(similarity.pkl'))
 st.title("AI Based Movie Recommender System")
 selected_movie_name=st.selectbox(
     'Select Movie From The Given List',
